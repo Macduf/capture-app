@@ -3,6 +3,7 @@
 import './app.css';
 import React from 'react';
 import { Provider } from 'react-redux';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { AppContents } from './AppContents.component';
 import {
     RulesEngineVerboseInitializer,
@@ -16,16 +17,20 @@ type Props = {
     store: ReduxStore,
 };
 
+const queryClient = new QueryClient();
+
 export const App = ({ store }: Props) => (
     <React.Fragment>
         <Provider
             store={store}
         >
-            <MetadataAutoSelectInitializer>
-                <RulesEngineVerboseInitializer>
-                    <AppContents />
-                </RulesEngineVerboseInitializer>
-            </MetadataAutoSelectInitializer>
+            <QueryClientProvider client={queryClient}>
+                <MetadataAutoSelectInitializer>
+                    <RulesEngineVerboseInitializer>
+                        <AppContents />
+                    </RulesEngineVerboseInitializer>
+                </MetadataAutoSelectInitializer>
+            </QueryClientProvider>
         </Provider>
     </React.Fragment>
 );
