@@ -11,7 +11,7 @@ export type KeyboardManager = {
 };
 
 export const withKeyboardNavigation = () => (InnerComponent: ComponentType<any>) => (props: any) => {
-    const pressedKeys = useRef(new Set);
+    const pressedKeys = useRef(new Set());
 
     const keyboardManager = useMemo(() => ({
         managedKeys,

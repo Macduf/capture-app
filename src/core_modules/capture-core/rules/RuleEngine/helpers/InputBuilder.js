@@ -177,7 +177,7 @@ const convertConstants = (constants: Constants): Map<string, string> =>
     constants.reduce((acc, constant) => {
         acc.set(constant.displayName, constant.value);
         return acc;
-    }, new Map);
+    }, new Map());
 
 const convertOption = (option: RawOption) => new Option(option.displayName, option.code);
 

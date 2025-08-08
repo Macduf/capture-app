@@ -17,7 +17,7 @@ export const useProgramMetadata = (programId: string) => {
                     accIds.add(dataElement.dataElementId);
                     return accIds;
                 }, acc),
-            new Set) : undefined), [program]);
+            new Set()) : undefined), [program]);
 
     const {
         isLoading: loadingDataElements,
@@ -32,7 +32,7 @@ export const useProgramMetadata = (programId: string) => {
                     acc.add(dataElement.optionSet.id);
                 }
                 return acc;
-            }, new Set),
+            }, new Set()),
             dataElementDictionary: dataElements.reduce((acc, dataElement) => {
                 acc[dataElement.id] = dataElement;
                 return acc;
