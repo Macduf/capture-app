@@ -2,7 +2,7 @@
     "name": "@dhis2/rules-engine-javascript",
     "version": "103.2.4",
     "license": "BSD-3-Clause",
-    "main": "./build/cjs/index.js",
+    "main": "./build\\cjs\\index.js",
     "scripts": {
         "linter:check": "eslint -c .eslintrc . --quiet",
         "build": "d2-app-scripts build",
@@ -14,9 +14,9 @@
         "d2-utilizr": "^0.2.15",
         "loglevel": "^1.9.1"
     },
-    "module": "./build/es/index.js",
+    "module": "./build\\es\\index.js",
     "exports": {
-        "import": "./build/es/index.js",
-        "require": "./build/cjs/index.js"
+        "import": "./build\\es\\index.js",
+        "require": "./build\\cjs\\index.js"
     }
 }
