@@ -70,7 +70,7 @@
     "test": "yarn workspaces run build && d2-app-scripts test",
     "test:debug": "yarn workspaces run build && react-scripts --inspect-brk test --runInBand",
     "jsdoc": "NODE_ENV=development jsdoc -c jsdoc-conf.json",
-    "linter:fix": "eslint -c .eslintrc . --fix",
+    "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
     "linter:check": "yarn workspaces run linter:check && yarn workspaces run build && eslint -c .eslintrc . --quiet",
     "flow:check": "./node_modules/.bin/flow check ./src",
     "flow:addTypes": "flow-typed install",
